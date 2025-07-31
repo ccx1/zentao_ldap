@@ -4,7 +4,8 @@ function onClickTest() {
 		dn: $('#ldapBindDN').val(),
 		pwd: $('#ldapPassword').val(),
 	}, function(data) {
-		$('#testRlt').html(data);
+		console.log(data)
+		$('#testRlt').html(data == 1 ? '连接成功': data);
 	});
 }
 
@@ -20,3 +21,5 @@ function save() {
 
 	});
 }
+
+document.getElementById('main').style.display = 'none'
